@@ -1,0 +1,259 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 700px;
+  padding: 15px;
+}
+
+.required-fields-container {
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.instruction-text {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.block-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fields-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+.field-name {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.field-type {
+  margin-right: 10px;
+  color: #666;
+  font-style: italic;
+}
+
+.field-required {
+  margin-right: 10px;
+}
+
+.field-validation {
+  margin-left: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.input-group, .output-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  resize: vertical;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+pre {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px;
+  height: 300px;
+  overflow: auto;
+  margin: 0;
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+button {
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  flex-grow: 1;
+  border: none;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.primary-button {
+  background-color: #4285f4;
+  color: white;
+}
+
+.secondary-button {
+  background-color: #f4b400;
+  color: white;
+}
+
+.action-button {
+  background-color: #0f9d58;
+  color: white;
+}
+
+.danger-button {
+  background-color: #db4437;
+  color: white;
+}
+
+.ai-button {
+  background-color: #10a37f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ai-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('images/ai-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #10a37f;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.info-box {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.info-box a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.info-box a:hover {
+  text-decoration: underline;
+}
+
+.tab-header {
+  display: flex;
+  margin-bottom: -1px;
+}
+
+.tab-button {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 8px 16px;
+  margin-right: 2px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  flex-grow: 0;
+}
+
+.tab-button.active {
+  background-color: #fff;
+  color: #4285f4;
+  font-weight: bold;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.output-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}

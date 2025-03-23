@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>API Test Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>API Test Generator</h1>
+    <div class="input-group">
+      <label for="curl-input">CURL Komutunu Girin:</label>
+      <textarea id="curl-input" placeholder="curl komutunuzu buraya yapıştırın..."></textarea>
+    </div>
+    <div class="required-fields-container" style="display: none;">
+      <label class="block-label">Zorunlu Alanlar ve Validasyonlar:</label>
+      <div class="instruction-text">Zorunlu olması gereken alanları işaretleyip "Senaryoları Oluştur" butonuna tıklayın.</div>
+      <div id="required-fields-list" class="fields-list">
+      </div>
+    </div>
+    <div class="button-group">
+      <button id="analyze-button" class="primary-button">Analiz Et</button>
+      <button id="ai-analyze-button" class="ai-button"><span class="ai-icon"></span>AI ile Analiz</button>
+      <button id="generate-button" disabled class="secondary-button">Senaryoları Oluştur</button>
+    </div>
+    <div class="button-group">
+      <button id="copy-button" class="action-button">Kopyala</button>
+      <button id="clear-button" class="danger-button">Temizle</button>
+    </div>
+
+    <div id="loading-indicator" style="display: none;">
+      <div class="spinner"></div>
+      <div class="loading-text">AI ile analiz ediliyor, lütfen bekleyin...</div>
+    </div>
+
+    <div id="api-key-missing" class="info-box" style="display: none;">
+      <p>AI analizi için OpenAI API anahtarı gereklidir. <a href="#" id="open-options">Ayarlar</a> sayfasından API anahtarınızı ekleyebilirsiniz.</p>
+    </div>
+    
+    <div class="output-container">
+      <div class="tab-header">
+        <button class="tab-button active" data-tab="parsed">Analiz</button>
+        <button class="tab-button" data-tab="tests">Test Senaryoları</button>
+        <button class="tab-button" data-tab="karate">Karate DSL</button>
+      </div>
+      <div class="tab-content">
+        <div id="parsed-tab" class="tab-pane active">
+          <pre id="parsed-output"></pre>
+        </div>
+        <div id="tests-tab" class="tab-pane">
+          <pre id="tests-output"></pre>
+        </div>
+        <div id="karate-tab" class="tab-pane">
+          <pre id="karate-output"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>API Test Generator Ayarları</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+    
+    .option-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    
+    input, select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .button-group {
+      display: flex;
+      align-items: center;
+    }
+    
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    button:hover {
+      background-color: #3367d6;
+    }
+    
+    #status {
+      margin-left: 15px;
+      color: #4caf50;
+    }
+    
+    .info-text {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>API Test Generator Ayarları</h1>
+    
+    <div class="option-group">
+      <label for="api-key">OpenAI API Anahtarı:</label>
+      <input type="password" id="api-key" placeholder="OpenAI API anahtarınızı girin">
+      <div class="info-text">API anahtarınızı güvenli bir şekilde depolayacağız. Anahtarınızı <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI Dashboard</a>'dan alabilirsiniz.</div>
+    </div>
+    
+    <div class="option-group">
+      <label for="ai-model">AI Modeli:</label>
+      <select id="ai-model">
+        <option value="gpt-3.5-turbo">GPT-3.5 Turbo (Hızlı ve Ekonomik)</option>
+        <option value="gpt-4">GPT-4 (Daha Yetenekli fakat Pahalı)</option>
+      </select>
+      <div class="info-text">GPT-3.5 Turbo çoğu durumda yeterlidir ve maliyeti daha düşüktür.</div>
+    </div>
+    
+    <div class="option-group">
+      <label for="usage-limit">Aylık Kullanım Limiti ($):</label>
+      <input type="number" id="usage-limit" min="0" step="0.1" value="10" placeholder="Aylık kullanım limitinizi girin">
+      <div class="info-text">Her AI analiz isteği yaklaşık $0.002-0.005 maliyet oluşturur. Limit sizin eklenti içinde ne kadar harcama yapabileceğinizi belirler.</div>
+    </div>
+    
+    <div class="button-group">
+      <button id="save-button">Kaydet</button>
+      <div id="status"></div>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
